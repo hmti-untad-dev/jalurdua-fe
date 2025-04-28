@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { Button } from "@/components/ui/button";
 import { ArrowCircleRight, Trophy } from "@phosphor-icons/react";
 
 interface SlideData {
