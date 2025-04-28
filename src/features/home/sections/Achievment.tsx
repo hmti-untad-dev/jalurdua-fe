@@ -1,0 +1,143 @@
+import { useState, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowCircleRight, Trophy } from "@phosphor-icons/react";
+
+interface SlideData {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
+
+const slides: SlideData[] = [
+  {
+    id: 1,
+    title: "Best Innovation PROXO 2024",
+    description:
+      "Tim Recyle Mart berhasil meraih juara pertama dalam kategori Best Innovation and Impact Full pada lomba web app!",
+    image: "/img/proxo.jpg",
+  },
+  {
+    id: 2,
+    title: "PERMITECH EXPO 2024!",
+    description:
+      "Perwakilan HMTI UNTAD telah berhasil meraih prestasi gemilang di ajang PERMITECH EXPO 2024! 🎉 Juara 1 Lomba UI/UX 🎉 Juara 3 Lomba Video Kreatif",
+    image: "/img/permikomnas.JPG",
+  },
+  {
+    id: 3,
+    title: "Finalis LIDM 2024",
+    description:
+      "Selamat untuk Widya Ayunindya Poge dan tim Pixelpals atas prestasi luar biasa menjadi salah satu finalis dari 20 tim terbaik se-Indonesia di ajang LIDM 2024! 🎉",
+    image: "/img/lidm.jpeg",
+  },
+];
+
+function Achievement() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const slideRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSlide = (index: number) => {
+    if (slideRef.current) {
+      const slideWidth = slideRef.current.offsetWidth;
+      slideRef.current.scrollTo({
+        left: slideWidth * index,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const nextSlide = () => {
+    const newIndex = (currentIndex + 1) % slides.length;
+    setCurrentIndex(newIndex);
+    scrollToSlide(newIndex);
+  };
+
+  const prevSlide = () => {
+    const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+    setCurrentIndex(newIndex);
+    scrollToSlide(newIndex);
+  };
+
+  return (
+    <>
+      <div className="mx-8 flex justify-center pt-24 md:mx-16" id="achievement">
+        <div>
+          <div className="flex items-center gap-5">
+            <h1 className="font-anton text-3xl text-[#3E3F90] uppercase md:text-5xl">Achievement</h1>
+            <Trophy size={40} color="#3E3F90" weight="bold" />
+          </div>
+
+          <div className="flex flex-col gap-10 pt-5 md:pt-10 lg:flex-row lg:justify-between">
+            {/* Description Section */}
+            <div className="w-auto lg:w-1/2">
+              <div className="pb-7">
+                <h2 className="w-fit text-[25px] font-bold">{slides[currentIndex].title}</h2>
+                <p className="pt-4 text-base">{slides[currentIndex].description}</p>
+              </div>
+              <a
+                href="#"
+                className="flex w-fit items-center gap-3 rounded-lg bg-[#3E3F90] p-3 px-8 transition-all hover:bg-[#333477]"
+              >
+                <p className="text-lg font-semibold text-white">Detail</p>
+              </a>
+            </div>
+
+            {/* Image Slider */}
+            <div className="relative w-auto overflow-hidden lg:w-1/2">
+              <div className="relative h-full w-full">
+                <div ref={slideRef} className="flex h-full w-full overflow-x-hidden transition-all duration-500">
+                  {slides.map((slide) => (
+                    <div key={slide.id} className="w-full flex-shrink-0">
+                      <img src={slide.image} alt={slide.title} className="h-full w-full rounded-[10px]" />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Prev Button */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute top-1/2 left-3 -translate-y-1/2 rounded-lg bg-[#00000051] p-2 text-white duration-300 hover:bg-[#3E3F90]"
+                >
+                  <svg width="16" height="16" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5 1L2.41421 3.58579C1.74755 4.25245 1.41421 4.58579 1.41421 5C1.41421 5.41421 1.74755 5.74755 2.41421 6.41421L5 9"
+                      stroke="white"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                {/* Next Button */}
+                <button
+                  onClick={nextSlide}
+                  className="absolute top-1/2 right-3 -translate-y-1/2 rounded-lg bg-[#00000051] p-2 text-white duration-300 hover:bg-[#3E3F90]"
+                >
+                  <svg width="16" height="16" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1"
+                      stroke="white"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* See More Section */}
+      <div className="group mx-auto flex min-h-full w-fit items-center justify-center gap-2 p-8 text-[#3E3F90]">
+        <p className="cursor-pointer font-bold group-hover:underline">See more!</p>
+        <ArrowCircleRight size={24} className="text-[#3E3F90] transition-all group-hover:translate-x-1" />
+      </div>
+    </>
+  );
+}
+
+export default Achievement;
