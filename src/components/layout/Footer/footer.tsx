@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <div className="bg-[#222222] px-8 py-10 text-[#F2F2F2] md:px-16" id="contact">
       <div className="flex flex-nowrap justify-normal gap-7 pb-5">
-        <img className="max-h-16 max-w-16" src="../../public/images/logo-untad.png" alt="" />
-        <img className="max-h-16 max-w-16" src="../../public/images/logo-hmti.png" alt="" />
+        <img className="max-h-16 max-w-16" src="./img/logo-untad.png" alt="" />
+        <img className="max-h-16 max-w-16" src="./img/logo-hmti.png" alt="" />
       </div>
       <div className="flex flex-col flex-wrap justify-normal sm:flex-row sm:flex-nowrap sm:justify-between">
         <div>
@@ -31,11 +31,13 @@ export default function Footer() {
         <div>
           <ul className="space-y-2 pb-5 sm:text-end">
             <li className="text-base font-medium lg:text-xl">Telepon</li>
-            <p className="text-sm font-light lg:text-base">08 123 123 123</p>
+            <p className="text-sm font-light lg:text-base">+62 821-9688-2243</p>
             <li className="text-base font-medium lg:text-xl">Email</li>
             <p className="text-sm font-light lg:text-base">email@abc</p>
             <li className="text-base font-medium lg:text-xl">Alamat</li>
-            <p className="pb-4 text-sm font-light lg:text-base">Jl.ABCDEFGH</p>
+            <p className="pb-4 text-sm font-light lg:text-base">
+              Sekretariat Himpunan Mahasiswa Teknik Informatika, Tondo, Kec. Palu Tim., Kota Palu, Sulawesi Tengah 94148
+            </p>
             <iframe
               className="h-36 w-full"
               loading="lazy"
@@ -67,7 +69,6 @@ export default function Footer() {
               target="_blank"
               className="flex h-9 w-9 content-center rounded-full border-2 border-solid border-white p-2 duration-300 hover:scale-110 sm:h-10 sm:w-10"
             >
-              <img src="../../public/images/tik-tok.png" alt="" />
               <TiktokLogo size={20} />
             </a>
             <a
@@ -75,7 +76,6 @@ export default function Footer() {
               target="_blank"
               className="flex h-9 w-9 content-center rounded-full border-2 border-solid border-white p-2 duration-300 hover:scale-110 sm:h-10 sm:w-10"
             >
-              <img src="../../public/images/youtube.png" alt="" />
               <YoutubeLogo size={20} />
             </a>
             <a
@@ -83,7 +83,6 @@ export default function Footer() {
               target="_blank"
               className="flex h-9 w-9 content-center rounded-full border-2 border-solid border-white p-2 duration-300 hover:scale-110 sm:h-10 sm:w-10"
             >
-              <img src="../../public/images/facebook-app-symbol.png" alt="" />
               <FacebookLogo size={20} />
             </a>
           </div>

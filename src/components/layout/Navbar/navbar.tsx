@@ -3,7 +3,7 @@ export default function Navbar() {
     <>
       <nav className="font-mons sticky top-5 z-50 mx-4 flex h-[55px] items-center justify-between rounded-[25px] bg-[#3E3F90] px-[32px] py-3 text-white drop-shadow-2xl lg:mx-8">
         <a className="flex items-center gap-3 text-xl font-extrabold" href="#">
-          <img src="../../public/images/logo-hmti.png" alt="logo" width="37.06px" height="37px" />
+          <img src="./img/logo-hmti.png" alt="logo" width="37.06px" height="37px" />
           <p>HMTI UNTAD</p>
         </a>
         <div className="lg:hidden">
@@ -53,7 +53,7 @@ export default function Navbar() {
           <div className="font-mons mb-8 flex items-center">
             <a className="mr-auto leading-none font-extrabold" href="#">
               <div className="flex items-center gap-4 text-xl">
-                <img src="../../public/images/logo-hmti.png" alt="logo" width="37.06px" height="37px" />
+                <img src="./img/logo-hmti.png" alt="logo" width="37.06px" height="37px" />
                 <p>HMTI UNTAD</p>
               </div>
             </a>
