@@ -3,6 +3,7 @@ import Achievement from "./features/home/sections/Achievment";
 import Documentation from "./features/home/sections/Documentation";
 import Sejarah from "./features/home/sections/aboutSection/sejarah";
 import VisiMisi from "./features/home/sections/aboutSection/visiMisi";
+import Faq from "./features/home/sections/faq";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <VisiMisi />
         <Achievement />
         <Documentation />
+        <Faq />
       </WrapperLayout>
     </>
   );
