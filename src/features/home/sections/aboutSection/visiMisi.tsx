@@ -21,7 +21,7 @@ export default function VisiMisi() {
         </div>
       </div>
       <div className="mx-16 grid grid-cols-1 gap-x-10 gap-y-32 py-16 md:grid-cols-2 lg:grid-cols-4">
-        <div className="group color h-fit w-2/3 cursor-pointer rounded-2xl border-[1px] border-black bg-gray-200 p-4 transition-all hover:bg-[#3E3F90] lg:h-fit lg:min-h-[335px] lg:p-5">
+        <div className="group color h-fit cursor-pointer rounded-2xl border-[1px] border-black bg-gray-200 p-4 transition-all hover:bg-[#3E3F90] lg:h-fit lg:min-h-[335px] lg:p-5">
           <div>
             <img
               src="./img/pendidikan.png"
@@ -38,7 +38,7 @@ export default function VisiMisi() {
             </p>
           </div>
         </div>
-        <div className="group color h-fit w-2/3 cursor-pointer rounded-2xl border-[1px] border-black bg-gray-200 p-4 transition-all hover:bg-[#3E3F90] lg:h-fit lg:min-h-[335px] lg:p-5">
+        <div className="group color h-fit cursor-pointer rounded-2xl border-[1px] border-black bg-gray-200 p-4 transition-all hover:bg-[#3E3F90] lg:h-fit lg:min-h-[335px] lg:p-5">
           <div>
             <img
               src="./img/penelitian.png"
@@ -56,7 +56,7 @@ export default function VisiMisi() {
             </p>
           </div>
         </div>
-        <div className="group color h-fit w-2/3 cursor-pointer rounded-2xl border-[1px] border-black bg-gray-200 p-4 transition-all hover:bg-[#3E3F90] lg:h-fit lg:min-h-[335px] lg:p-5">
+        <div className="group color h-fit cursor-pointer rounded-2xl border-[1px] border-black bg-gray-200 p-4 transition-all hover:bg-[#3E3F90] lg:h-fit lg:min-h-[335px] lg:p-5">
           <div>
             <img
               src="./img/pengabdian.png"
@@ -74,7 +74,7 @@ export default function VisiMisi() {
             </p>
           </div>
         </div>
-        <div className="group color h-fit w-2/3 cursor-pointer rounded-2xl border-[1px] border-black bg-gray-200 p-4 transition-all hover:bg-[#3E3F90] lg:h-fit lg:min-h-[335px] lg:p-5">
+        <div className="group color h-fit cursor-pointer rounded-2xl border-[1px] border-black bg-gray-200 p-4 transition-all hover:bg-[#3E3F90] lg:h-fit lg:min-h-[335px] lg:p-5">
           <div>
             <img
               src="./img/kemitraan.png"

@@ -1,6 +1,7 @@
 import WrapperLayout from "./components/layout/WrapperLayout";
 import Achievement from "./features/home/sections/Achievment";
 import Documentation from "./features/home/sections/Documentation";
+import Sejarah from "./features/home/sections/aboutSection/sejarah";
 import VisiMisi from "./features/home/sections/aboutSection/visiMisi";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <WrapperLayout>
         <h1 className="text-3xl font-bold text-blue-800 underline">HMTI UNTAD!</h1>
+        <Sejarah />
         <VisiMisi />
         <Achievement />
         <Documentation />
