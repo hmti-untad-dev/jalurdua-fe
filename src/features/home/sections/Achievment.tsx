@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { ArrowCircleRight, Trophy } from "@phosphor-icons/react";
+import { ArrowCircleRight, CaretLeft, CaretRight, Trophy } from "@phosphor-icons/react";
 
 interface SlideData {
   id: number;
@@ -98,15 +98,7 @@ function Achievement() {
                   onClick={prevSlide}
                   className="absolute top-1/2 left-3 -translate-y-1/2 rounded-lg bg-[#00000051] p-2 text-white duration-300 hover:bg-[#3E3F90]"
                 >
-                  <svg width="16" height="16" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M5 1L2.41421 3.58579C1.74755 4.25245 1.41421 4.58579 1.41421 5C1.41421 5.41421 1.74755 5.74755 2.41421 6.41421L5 9"
-                      stroke="white"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <CaretLeft size={16} weight="bold" />
                 </button>
 
                 {/* Next Button */}
@@ -114,15 +106,7 @@ function Achievement() {
                   onClick={nextSlide}
                   className="absolute top-1/2 right-3 -translate-y-1/2 rounded-lg bg-[#00000051] p-2 text-white duration-300 hover:bg-[#3E3F90]"
                 >
-                  <svg width="16" height="16" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1"
-                      stroke="white"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <CaretRight size={16} weight="bold" />
                 </button>
               </div>
             </div>
