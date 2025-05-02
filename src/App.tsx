@@ -5,12 +5,13 @@ import Sejarah from "./features/home/sections/aboutSection/sejarah";
 import VisiMisi from "./features/home/sections/aboutSection/visiMisi";
 import Faq from "./features/home/sections/faq";
 import ArtiLogo from "./features/home/sections/aboutSection/artiLogo";
+import Hero from "./features/home/sections/hero";
 
 function App() {
   return (
     <>
       <WrapperLayout>
-        <h1 className="text-3xl font-bold text-blue-800 underline">HMTI UNTAD!</h1>
+        <Hero />
         <Sejarah />
         <VisiMisi />
         <ArtiLogo />
