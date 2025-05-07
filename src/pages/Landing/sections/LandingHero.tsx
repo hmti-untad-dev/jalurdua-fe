@@ -1,6 +1,6 @@
 import { FacebookLogo, InstagramLogo, TiktokLogo, YoutubeLogo } from "@phosphor-icons/react";
 
-export default function Hero() {
+export default function LandingHero() {
   return (
     <div className="my-10 flex w-full flex-col items-center px-4 md:px-16 md:pb-4">
       <div className="svg-container relative flex w-full">

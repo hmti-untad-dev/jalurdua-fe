@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+# HMTI UNTAD Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based frontend project for HMTI UNTAD website using modern tech stack and best practices.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework:** React with TypeScript
+- **Build Tool:** Vite
+- **Styling:**
+  - Tailwind CSS with custom theming
+  - OKLCH color system
+  - CSS Custom Properties
+- **UI Components:** Custom components with Radix UI primitives
+- **Routing:** React Router
+- **Utilities:**
+  - class-variance-authority for component variants
+  - clsx & tailwind-merge for className management
+- **Code Quality:**
+  - ESLint with TypeScript support
+  - React Hooks linting
+  - React Refresh
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Light/Dark theme support using CSS custom properties
+- Custom color system using OKLCH color space for better color reproduction
+- Component system with variants using class-variance-authority
+- Client-side routing with React Router
+- Responsive design
+- Font integration with Google Fonts (Anton, Montserrat, Roboto)
+- Type-safe development with TypeScript
+- Module alias support (@/ imports)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Start development server:
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+pnpm run dev
 ```
+
+## Project Structure
+
+```
+jalurdua-fe/
+├── src/
+│   ├── components/
+│   │   └── ui/          # UI components with variants (button, etc.)
+│   ├── lib/
+│   │   └── utils.ts     # Utility functions (className merging)
+│   ├── pages/
+│   │   └── Landing/     # Landing page components
+│   ├── App.tsx          # Main app component with routing
+│   ├── main.tsx        # Application entry point with StrictMode
+│   ├── index.css       # Global styles and theme variables
+│   └── vite-env.d.ts   # Vite type declarations
+├── public/
+│   └── favicon.ico     # Site favicon
+├── index.html          # HTML entry point
+├── vite.config.ts      # Vite & plugin configuration
+└── eslint.config.js    # ESLint configuration
+```
+
+## Development
+
+- Uses TypeScript with strict configuration
+- Employs module path alias `@/` for clean imports
+- Follows React best practices with Strict Mode enabled
+- Implements consistent code style with ESLint
+- Supports hot module replacement with React Refresh
+
+## Design System
+
+The project implements a comprehensive design system:
+
+- Semantic color tokens for light/dark themes
+- OKLCH color space for modern color handling
+- Consistent spacing and border radius system
+- Custom component variants with class-variance-authority
+- Responsive typography with custom font stack
+- Accessible UI components built on Radix UI primitives

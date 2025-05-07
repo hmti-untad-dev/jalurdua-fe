@@ -1,41 +1,14 @@
 import { ArrowCircleRight, CaretLeft, CaretRight } from "@phosphor-icons/react";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { DOCUMENTATIONS_DATA } from "../constants";
 
-type Slide = {
-  image: string;
-  title: string;
-  description: string;
-  link: string;
-};
-
-const slides: Slide[] = [
-  {
-    image: "/img/a.png",
-    title: "Dokumentasi & Informasi",
-    description: "Dokumentasi Kegiatan Desa Binaan di Desa Dongi Dongi, Tapal Batas Kab Sigi dan Kab Poso",
-    link: "#",
-  },
-  {
-    image: "/img/b.png",
-    title: "Dokumentasi & Informasi",
-    description: "Dokumentasi Kegiatan Pengenalan Lomba Gemastik di Hall Arsitek Fakultas Teknik",
-    link: "#",
-  },
-  {
-    image: "/img/c.png",
-    title: "Dokumentasi & Informasi",
-    description: "Dokumentasi Pengurus Himpunan Mahasiswa Teknik Informatika periode 2023-2024",
-    link: "#",
-  },
-];
-
-const Documentation: React.FC = () => {
+export default function LandingDocumentation() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Mengatur interval untuk slide otomatis
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % DOCUMENTATIONS_DATA.length);
     }, 3000); // 3 detik
 
     // Membersihkan interval saat komponen di-unmount
@@ -43,20 +16,20 @@ const Documentation: React.FC = () => {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % DOCUMENTATIONS_DATA.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + DOCUMENTATIONS_DATA.length) % DOCUMENTATIONS_DATA.length);
   };
 
   return (
-    <section className="relative w-full overflow-hidden">
+    <section id="dokumentasi" className="relative w-full overflow-hidden">
       <div
         className="flex transition-transform duration-500"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {slides.map((slide, index) => (
+        {DOCUMENTATIONS_DATA.map((slide, index) => (
           <div
             key={index}
             className="flex h-screen w-full flex-shrink-0 items-center bg-cover bg-center p-4 text-white md:p-16"
@@ -89,6 +62,4 @@ const Documentation: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Documentation;
+}

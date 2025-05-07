@@ -1,38 +1,8 @@
 import { useState, useRef } from "react";
 import { ArrowCircleRight, CaretLeft, CaretRight, Trophy } from "@phosphor-icons/react";
+import { ACHIEVEMENTS_DATA } from "../constants";
 
-interface SlideData {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-}
-
-const slides: SlideData[] = [
-  {
-    id: 1,
-    title: "Best Innovation PROXO 2024",
-    description:
-      "Tim Recyle Mart berhasil meraih juara pertama dalam kategori Best Innovation and Impact Full pada lomba web app!",
-    image: "/img/proxo.jpg",
-  },
-  {
-    id: 2,
-    title: "PERMITECH EXPO 2024!",
-    description:
-      "Perwakilan HMTI UNTAD telah berhasil meraih prestasi gemilang di ajang PERMITECH EXPO 2024! 🎉 Juara 1 Lomba UI/UX 🎉 Juara 3 Lomba Video Kreatif",
-    image: "/img/permikomnas.JPG",
-  },
-  {
-    id: 3,
-    title: "Finalis LIDM 2024",
-    description:
-      "Selamat untuk Widya Ayunindya Poge dan tim Pixelpals atas prestasi luar biasa menjadi salah satu finalis dari 20 tim terbaik se-Indonesia di ajang LIDM 2024! 🎉",
-    image: "/img/lidm.jpeg",
-  },
-];
-
-function Achievement() {
+export default function LandingAchievement() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slideRef = useRef<HTMLDivElement>(null);
 
@@ -47,13 +17,13 @@ function Achievement() {
   };
 
   const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % slides.length;
+    const newIndex = (currentIndex + 1) % ACHIEVEMENTS_DATA.length;
     setCurrentIndex(newIndex);
     scrollToSlide(newIndex);
   };
 
   const prevSlide = () => {
-    const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+    const newIndex = (currentIndex - 1 + ACHIEVEMENTS_DATA.length) % ACHIEVEMENTS_DATA.length;
     setCurrentIndex(newIndex);
     scrollToSlide(newIndex);
   };
@@ -64,15 +34,15 @@ function Achievement() {
         <div>
           <div className="flex items-center gap-5">
             <h1 className="font-anton text-3xl text-[#3E3F90] uppercase md:text-5xl">Achievement</h1>
-            <Trophy size={40} color="#3E3F90" weight="bold" />
+            <Trophy size={50} color="#3E3F90" weight="bold" />
           </div>
 
           <div className="flex flex-col gap-10 pt-5 md:pt-10 lg:flex-row lg:justify-between">
             {/* Description Section */}
             <div className="w-auto lg:w-1/2">
               <div className="pb-7">
-                <h2 className="w-fit text-[25px] font-bold">{slides[currentIndex].title}</h2>
-                <p className="pt-4 text-base">{slides[currentIndex].description}</p>
+                <h2 className="w-fit text-[25px] font-bold">{ACHIEVEMENTS_DATA[currentIndex].title}</h2>
+                <p className="pt-4 text-base">{ACHIEVEMENTS_DATA[currentIndex].description}</p>
               </div>
               <a
                 href="#"
@@ -86,7 +56,7 @@ function Achievement() {
             <div className="relative w-auto overflow-hidden lg:w-1/2">
               <div className="relative h-full w-full">
                 <div ref={slideRef} className="flex h-full w-full overflow-x-hidden transition-all duration-500">
-                  {slides.map((slide) => (
+                  {ACHIEVEMENTS_DATA.map((slide) => (
                     <div key={slide.id} className="w-full flex-shrink-0">
                       <img src={slide.image} alt={slide.title} className="h-full w-full rounded-[10px]" />
                     </div>
@@ -122,5 +92,3 @@ function Achievement() {
     </>
   );
 }
-
-export default Achievement;

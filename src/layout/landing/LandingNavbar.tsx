@@ -1,4 +1,6 @@
-export default function Navbar() {
+import { NAV_LINKS } from "./constants";
+
+export default function LandingNavbar() {
   return (
     <>
       <nav className="font-mons sticky top-5 z-50 mx-4 flex h-[55px] items-center justify-between rounded-[25px] bg-[#3E3F90] px-[32px] py-3 text-white drop-shadow-2xl lg:mx-8">
@@ -15,35 +17,13 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="g:space-x-6 relative left-0 hidden gap-9 text-[16px] font-semibold lg:flex">
-          <li>
-            <a className="text-sm hover:underline hover:decoration-2 hover:underline-offset-8" href="#about">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a className="text-sm hover:underline hover:decoration-2 hover:underline-offset-8" href="#achivement">
-              Achivement
-            </a>
-          </li>
-
-          <li>
-            <a className="text-sm hover:underline hover:decoration-2 hover:underline-offset-8" href="#dokumentasi">
-              Dokumentasi
-            </a>
-          </li>
-
-          <li>
-            <a className="text-sm hover:underline hover:decoration-2 hover:underline-offset-8" href="#faq">
-              FAQs
-            </a>
-          </li>
-
-          <li>
-            <a className="text-sm hover:underline hover:decoration-2 hover:underline-offset-8" href="#contact">
-              Contact Us
-            </a>
-          </li>
+          {NAV_LINKS.map(({ href, label }) => (
+            <li key={href}>
+              <a className="text-sm hover:underline hover:decoration-2 hover:underline-offset-8" href={href}>
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
 
@@ -71,31 +51,13 @@ export default function Navbar() {
           </div>
           <div>
             <ul>
-              <li className="mb-1">
-                <a className="font-mons block rounded p-4 text-base font-semibold hover:font-bold" href="#about">
-                  About
-                </a>
-              </li>
-              <li className="mb-1">
-                <a className="font-mons block rounded p-4 text-base font-semibold hover:font-bold" href="#achivement">
-                  Achivement
-                </a>
-              </li>
-              <li className="mb-1">
-                <a className="font-mons block rounded p-4 text-base font-semibold hover:font-bold" href="#dokumentasi">
-                  Dokumentasi
-                </a>
-              </li>
-              <li className="mb-1">
-                <a className="font-mons block rounded p-4 text-base font-semibold hover:font-bold" href="#faq">
-                  FAQs
-                </a>
-              </li>
-              <li className="mb-1">
-                <a className="font-mons block rounded p-4 text-base font-semibold hover:font-bold" href="#contact">
-                  Contact Us
-                </a>
-              </li>
+              {NAV_LINKS.map(({ href, label }) => (
+                <li key={href} className="mb-1">
+                  <a className="font-mons block rounded p-4 text-base font-semibold hover:font-bold" href={href}>
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </nav>
