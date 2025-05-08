@@ -1,5 +1,5 @@
 import { Question } from "@phosphor-icons/react";
-import { MISSIONS_DATA, LOGO_MEANINGS_LEFT, LOGO_MEANINGS_RIGHT } from "../constants";
+import { MISSIONS_DATA } from "../constants";
 
 export default function LandingAbout() {
   return (
@@ -87,43 +87,167 @@ export default function LandingAbout() {
       </div>
 
       {/* Arti Logo */}
-      <div className="mx-8 mb-8 flex justify-center lg:mx-16">
-        <div>
+      <section className="mx-8 mb-8 flex justify-center lg:mx-16">
+        <div className="mx-auto max-w-7xl">
           <h2 className="font-anton pb-8 text-center text-3xl font-bold text-[#373435] uppercase lg:text-5xl">
             Arti Logo
           </h2>
-          <div className="font-mons flex w-full items-center gap-8 rounded-2xl border-[1px] border-black bg-gray-200 p-5 text-base max-lg:flex-col max-lg:text-xs">
-            <div className="flex flex-1 flex-col gap-4">
-              {LOGO_MEANINGS_LEFT.map((item, index) => (
-                <div key={index} className="flex justify-between gap-8">
-                  <p>{item.description}</p>
-                  {item.color ? (
-                    <div className="flex gap-2">
-                      <div className={`h-5 w-5 flex-none border border-black ${item.color.bgClass}`}></div>
-                      <p className="font-semibold">{item.label}</p>
-                    </div>
-                  ) : (
-                    <p className="font-semibold">{item.label}</p>
-                  )}
+
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
+            {/* Left Column - Color Meanings */}
+            <div className="order-2 space-y-6 lg:order-1">
+              <h3 className="mb-4 text-center text-xl font-semibold lg:text-left">Makna Warna</h3>
+
+              <div className="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+                <div className="mt-1 h-12 w-12 flex-shrink-0 rounded-md bg-[#3E4095]"></div>
+                <div>
+                  <div className="font-medium text-[#3E4095]">Biru (3E4095)</div>
+                  <p className="text-gray-700">
+                    Bermakna kekompakan dan solidaritas yang tidak pernah putus antara anggota himpunan, selalu mendalam
+                    dan kuat.
+                  </p>
                 </div>
-              ))}
+              </div>
+
+              <div className="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+                <div className="mt-1 h-12 w-12 flex-shrink-0 rounded-md border border-gray-200 bg-[#FEFEFE]"></div>
+                <div>
+                  <div className="font-medium">Putih (FEFEFE)</div>
+                  <p className="text-gray-700">Bermakna kesetiaan, kepercayaan, pengabdian, dan loyalitas.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+                <div className="mt-1 h-12 w-12 flex-shrink-0 rounded-md bg-[#373435]"></div>
+                <div>
+                  <div className="font-medium text-[#373435]">Hitam (373435)</div>
+                  <p className="text-gray-700">
+                    Bermakna kekuatan dan ketegasan dan juga bermakna sebagai warna persatuan teknik.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="flex-none">
-              <img src="./img/logo-hmti.png" alt="Logo Himpunan" className="item-center max-lg:flex" />
+            {/* Center Column - Logo */}
+            <div className="order-1 flex items-center justify-center lg:order-2">
+              <div className="relative h-64 w-64 md:h-80 md:w-80">
+                <div className="absolute inset-0 animate-pulse rounded-full bg-blue-100 opacity-20"></div>
+                <img
+                  src="./img/logo-hmti.png"
+                  alt="Logo HMTI UNTAD"
+                  width={300}
+                  height={300}
+                  className="relative z-10 object-contain"
+                />
+              </div>
             </div>
 
-            <div className="flex flex-1 flex-col gap-4">
-              {LOGO_MEANINGS_RIGHT.map((item, index) => (
-                <div key={index} className="flex flex-row-reverse justify-between gap-8 max-lg:flex-row">
-                  <p className="text-right max-lg:text-left">{item.description}</p>
-                  <p className="font-semibold max-lg:text-right">{item.label}</p>
+            {/* Right Column - Element Meanings */}
+            <div className="order-3 space-y-6">
+              <h3 className="mb-4 text-center text-xl font-semibold lg:text-left">Makna Elemen</h3>
+
+              <div className="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-blue-100">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"
+                    />
+                  </svg>
                 </div>
-              ))}
+                <div>
+                  <div className="font-medium text-blue-600">Signal</div>
+                  <p className="text-gray-700">Bermakna penghubung dan pemersatu anggota himpunan.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-blue-100">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-medium text-blue-600">Lingkaran Satelit</div>
+                  <p className="text-gray-700">
+                    Bermakna Mahasiswa Himpunan selalu aktif dan tidak berhenti untuk berkarya.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-blue-100">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-medium text-blue-600">USB</div>
+                  <p className="text-gray-700">
+                    Bermakna HMTI UNTAD bersifat terbuka dan saling berbagi ilmu pengetahuan.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-blue-100">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-medium text-blue-600">Open Source</div>
+                  <p className="text-gray-700">
+                    Bermakna HMTI UNTAD menjalin kerjasama atau kolaborasi ke berbagai individu maupun institusi yang
+                    sesuai dengan visi dan misi himpunan.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -4,6 +4,7 @@ import LandingFAQ from "./sections/LandingFAQ";
 import LandingDocumentation from "./sections/LandingDocumentation";
 import LandingAchievement from "./sections/LandingAchievement";
 import LandingAbout from "./sections/LandingAbout";
+import LandingOrganization from "./sections/LandingOrganization";
 import LandingForm from "./sections/LandingForm";
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
       <LandingHero />
       <LandingWrapper>
         <LandingAbout />
+        <LandingOrganization />
+
         <LandingAchievement />
         <LandingForm />
         <LandingDocumentation />
