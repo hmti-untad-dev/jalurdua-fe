@@ -31,9 +31,9 @@ export default function LandingOrganization() {
         {/* Chairman Section */}
         <div className="mb-16">
           <div className="overflow-hidden rounded-xl bg-blue-50 shadow-md">
-            <div className="md:flex">
+            <div className="w-full md:flex">
               <div className="md:w-1/3">
-                <div className="relative aspect-[3/4] h-full">
+                <div className="relative aspect-[3/4] h-full w-full">
                   <img src={CHAIRMAN.image} alt={CHAIRMAN.title} className="h-full w-full object-cover" />
                   <div className="absolute top-4 left-4 rounded-full bg-white px-3 py-1 text-sm font-medium">
                     {CHAIRMAN.title}
