@@ -5,6 +5,7 @@ import LandingDocumentation from "./sections/LandingDocumentation";
 import LandingAchievement from "./sections/LandingAchievement";
 import LandingAbout from "./sections/LandingAbout";
 import LandingOrganization from "./sections/LandingOrganization";
+import LandingForm from "./sections/LandingForm";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <LandingOrganization />
 
         <LandingAchievement />
+        <LandingForm />
         <LandingDocumentation />
         <LandingFAQ />
       </LandingWrapper>
