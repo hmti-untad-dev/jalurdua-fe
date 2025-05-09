@@ -9,11 +9,11 @@ export default function LandingFooter() {
       </div>
       <div className="flex flex-col flex-wrap justify-normal sm:flex-row sm:flex-nowrap sm:justify-between">
         <div>
-          <h2 className="text-base font-semibold lg:text-2xl">
+          <h2 className="w-fit text-base font-semibold lg:text-2xl">
             HIMPUNAN MAHASISWA TEKNIK INFORMATIKA UNIVERSITAS TADULAKO
           </h2>
           <p className="pb-3 text-sm font-light sm:pb-5 lg:text-base">Palu, 2025</p>
-          <ul className="flex gap-6 text-sm font-semibold md:block lg:text-base">
+          <ul className="flex flex-wrap gap-6 text-sm font-semibold md:block lg:text-base">
             {NAV_LINKS.map(({ href, label }) => (
               <li key={href} className="pb-3 underline underline-offset-4">
                 <a href={href}>{label}</a>
@@ -30,7 +30,7 @@ export default function LandingFooter() {
               </div>
             ))}
             <iframe
-              className="h-36 w-full"
+              className="h-36 w-fit"
               loading="lazy"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1465.4168217482325!2d119.89283360434703!3d-0.8423630391117937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8be95ab666d92b%3A0xe17eb36c6c793bb4!2sLaboratorium%20Teknik%20Informatika%20UNTAD!5e0!3m2!1sid!2sid!4v1722998192202!5m2!1sid!2sid"
               width="600"

@@ -6,11 +6,10 @@ export default function LandingHero() {
       <div className="svg-container relative flex w-full">
         <img className="pointer-none: md:invisible md:w-0" src="./img/Swappy.png" alt="" />
         <div className="invisible md:visible md:w-full">
-          <svg className="h-auto w-full" z-10 viewBox="0 0 1284 661" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="z-10 h-auto w-full" viewBox="0 0 1284 661" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
-              z-10
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M36 68.8904C16.1177 68.8904 0 85.0081 0 104.89V612.179C0 638.688 21.4903 660.179 48 660.179H928.832C955.342 660.179 976.832 638.688 976.832 612.179V586.031V547.442C976.832 520.932 998.323 499.442 1024.83 499.442H1109.23H1236C1262.51 499.442 1284 477.952 1284 451.442V88.6771C1284 80.9451 1277.73 74.6771 1270 74.6771H1207.72C1199.99 74.6771 1193.72 68.4091 1193.72 60.6771V36C1193.72 16.1177 1177.6 0 1157.72 0H373.693C353.811 0 337.693 16.1177 337.693 36V40.8904C337.693 56.3543 325.157 68.8904 309.693 68.8904H36ZM1207.72 30.3385C1207.72 47.094 1221.3 60.6771 1238.06 60.6771H1240.6C1256.84 60.6771 1270 47.5161 1270 31.2813C1270 22.32 1266.53 14.1684 1260.87 8.0946C1259.02 6.10934 1256.71 4.60064 1254.2 3.57058C1248.59 1.26898 1242.44 0 1236 0C1220.38 0 1207.72 12.6619 1207.72 28.2812V30.3385Z"
               fill="#3E3F90"
             />
@@ -25,8 +24,8 @@ export default function LandingHero() {
                 <button className="h-full w-auto transform transition-all duration-300 ease-in-out hover:scale-110 hover:brightness-145">
                   <svg width="238" height="116" viewBox="0 0 268 146" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M236.579 31.5088C243.305 31.5088 246.571 23.8775 243.213 18.0497C239.643 11.8571 234.285 6.82637 227.842 3.66416C221.354 0.479218 213.228 4.19295 213.228 11.4211C213.228 22.5152 222.222 31.5088 233.316 31.5088H236.579ZM248 53.0922C248 47.4566 242.215 43.5088 236.579 43.5088H233.316C215.594 43.5088 201.228 29.1426 201.228 11.4211C201.228 5.78535 197.28 0 191.645 0H36C16.1178 0 0 16.1178 0 36V71.3657C0 77.4296 6.62029 81.579 12.6842 81.579H22.1228C38.1391 81.579 51.1228 94.5627 51.1228 110.579V116.754C51.1228 120.967 54.146 125.088 58.359 125.088H212C231.882 125.088 248 108.97 248 89.0877V53.0922ZM41.1228 116.754C41.1228 118.612 40.8561 120.408 40.3589 122.105C39.808 123.986 37.9598 125.088 36 125.088C23.0445 125.088 11.6874 118.244 5.3465 107.975C1.12194 101.133 4.64323 91.579 12.6842 91.579H22.1228C32.6162 91.579 41.1228 100.086 41.1228 110.579V116.754Z"
                       fill="#5154B9"
                     />
@@ -41,7 +40,7 @@ export default function LandingHero() {
 
             <foreignObject x="280" y="580" width="580" height="100">
               <div className="flex items-center gap-5">
-                <text className="text-2xl font-bold text-[#f2f2f2] select-none">FOLLOW US!</text>
+                <p className="text-2xl font-bold text-[#f2f2f2] select-none">FOLLOW US!</p>
                 <a
                   href="https://www.instagram.com/hmtiuntad/"
                   target="_blank"
