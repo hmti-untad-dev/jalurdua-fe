@@ -1,10 +1,10 @@
-import { FacebookLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 import { CHAIRMAN, DEPARTMENT_HEADS, DEPUTY_OFFICERS } from "../constants";
 
 export default function LandingOrganization() {
   return (
     <>
-      <div className="font-mons mx-auto max-w-screen-2xl bg-[#373435] py-3">
+      <div className="font-mons mx-auto w-full bg-[#373435] py-3">
         <h1 className="text-center text-xl font-extrabold text-[#f2f2f2] sm:text-2xl md:text-3xl lg:text-4xl">
           &lsquo; WE MAKE A BETTER FUTURE &rsquo;
         </h1>
@@ -60,15 +60,26 @@ export default function LandingOrganization() {
                 </div>
 
                 <div className="flex space-x-4">
-                  <a href={CHAIRMAN.socialMedia?.instagram} className="hover:text-primary text-gray-600">
-                    <InstagramLogo className="h-6 w-6" weight="bold" />
-                  </a>
-                  <a href={CHAIRMAN.socialMedia?.facebook} className="hover:text-primary text-gray-600">
-                    <FacebookLogo className="h-6 w-6" weight="bold" />
-                  </a>
-                  <a href={CHAIRMAN.socialMedia?.linkedin} className="hover:text-primary text-gray-600">
-                    <LinkedinLogo className="h-6 w-6" weight="bold" />
-                  </a>
+                  {CHAIRMAN.socialMedia?.instagram && (
+                    <a
+                      href={`https://www.instagram.com/${CHAIRMAN.socialMedia?.instagram}`}
+                      className="hover:text-primary text-gray-600"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <InstagramLogo className="h-6 w-6" weight="bold" />
+                    </a>
+                  )}
+                  {CHAIRMAN.socialMedia?.linkedin && (
+                    <a
+                      href={`https://www.linkedin.com/in/${CHAIRMAN.socialMedia?.linkedin}`}
+                      className="hover:text-primary text-gray-600"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <LinkedinLogo className="h-6 w-6" weight="bold" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -90,15 +101,26 @@ export default function LandingOrganization() {
                     <h3 className="mb-1 text-xl font-bold">{officer.name}</h3>
                     <p className="text-muted-foreground italic">{officer.title}</p>
                     <div className="mt-3 flex space-x-4">
-                      <a href={CHAIRMAN.socialMedia?.instagram} className="hover:text-primary text-gray-600">
-                        <InstagramLogo className="h-6 w-6" weight="bold" />
-                      </a>
-                      <a href={CHAIRMAN.socialMedia?.facebook} className="hover:text-primary text-gray-600">
-                        <FacebookLogo className="h-6 w-6" weight="bold" />
-                      </a>
-                      <a href={CHAIRMAN.socialMedia?.linkedin} className="hover:text-primary text-gray-600">
-                        <LinkedinLogo className="h-6 w-6" weight="bold" />
-                      </a>
+                      {officer.socialMedia?.instagram && (
+                        <a
+                          href={`https://www.instagram.com/${officer.socialMedia?.instagram}`}
+                          className="hover:text-primary text-gray-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <InstagramLogo className="h-6 w-6" weight="bold" />
+                        </a>
+                      )}
+                      {officer.socialMedia?.linkedin && (
+                        <a
+                          href={`https://www.linkedin.com/in/${officer.socialMedia?.linkedin}`}
+                          className="hover:text-primary text-gray-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <LinkedinLogo className="h-6 w-6" weight="bold" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -110,13 +132,13 @@ export default function LandingOrganization() {
         {/* Department Leads Section */}
         <div>
           <h2 className="mb-6 text-2xl font-bold">Kepala Departemen</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {DEPARTMENT_HEADS.map((dept, index) => (
               <div key={index} className="overflow-hidden rounded-xl bg-blue-50 shadow-md">
-                <div className="flex">
+                <div className="flex h-full">
                   <div className="relative w-1/3">
                     <div className="relative h-full">
-                      <img src={dept.image} alt={dept.title} className="size-full object-bottom-right" />
+                      <img src={dept.image} alt={dept.title} className="aspect-[3/4] size-full object-cover" />
                     </div>
                   </div>
                   <div className="w-2/3 p-4">
@@ -124,15 +146,26 @@ export default function LandingOrganization() {
                     <p className="text-muted-foreground text-sm italic">{dept.title}</p>
                     <p className="text-muted-foreground pt-2 text-sm">{dept.description}</p>
                     <div className="mt-3 flex space-x-4">
-                      <a href={CHAIRMAN.socialMedia?.instagram} className="hover:text-primary text-gray-600">
-                        <InstagramLogo className="h-6 w-6" weight="bold" />
-                      </a>
-                      <a href={CHAIRMAN.socialMedia?.facebook} className="hover:text-primary text-gray-600">
-                        <FacebookLogo className="h-6 w-6" weight="bold" />
-                      </a>
-                      <a href={CHAIRMAN.socialMedia?.linkedin} className="hover:text-primary text-gray-600">
-                        <LinkedinLogo className="h-6 w-6" weight="bold" />
-                      </a>
+                      {dept.socialMedia?.instagram && (
+                        <a
+                          href={`https://www.instagram.com/${dept.socialMedia?.instagram}`}
+                          className="hover:text-primary text-gray-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <InstagramLogo className="h-6 w-6" weight="bold" />
+                        </a>
+                      )}
+                      {dept.socialMedia?.linkedin && (
+                        <a
+                          href={`https://www.linkedin.com/in/${dept.socialMedia?.linkedin}`}
+                          className="hover:text-primary text-gray-600"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <LinkedinLogo className="h-6 w-6" weight="bold" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

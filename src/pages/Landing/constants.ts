@@ -38,7 +38,6 @@ interface IOrganizationMember {
   image: string;
   socialMedia?: {
     instagram?: string;
-    facebook?: string;
     linkedin?: string;
   };
   vision?: string;
@@ -52,25 +51,26 @@ interface IDepartmentHead extends IOrganizationMember {
 
 export const FAQ_DATA: IFaqItem[] = [
   {
-    question: "Password Wifi Jurusan?",
-    answer: "Apaya",
+    question: "Apa Tujuan Dari Himpunan Mahasiswa Teknik Informatika?",
+    answer:
+      "Sebagai wadah Mahasiswa Jurusan Teknologi Informasi Fakultas Teknik Universitas Tadulako agar dapat mengontrol Mahasiswa Jurusan Teknologi Informasi, dimana mahasiswa berkumpul, bekerjasama secara rasional, sistematis dan terkendali, dengan memanfaatkan sumber daya dan lain sebagainya secara efektif dan efisien untuk mencapai tujuan bersama.",
   },
-  {
-    question: "Urus Ini Dimana?",
-    answer: "Disana",
-  },
-  {
-    question: "Siapa Kepala Jurusan?",
-    answer: "Siapaya",
-  },
-  {
-    question: "Ruang Administrasi Dimana?",
-    answer: "Dimana Saja",
-  },
-  {
-    question: "Blup Blup Blup?",
-    answer: "Blep Blep Blep",
-  },
+  // {
+  //   question: "Urus Ini Dimana?",
+  //   answer: "Disana",
+  // },
+  // {
+  //   question: "Siapa Kepala Jurusan?",
+  //   answer: "Siapaya",
+  // },
+  // {
+  //   question: "Ruang Administrasi Dimana?",
+  //   answer: "Dimana Saja",
+  // },
+  // {
+  //   question: "Blup Blup Blup?",
+  //   answer: "Blep Blep Blep",
+  // },
 ];
 
 export const DOCUMENTATIONS_DATA: IDocumentationItem[] = [
@@ -204,36 +204,35 @@ export const CHAIRMAN: IOrganizationMember = {
   mission:
     "1. Mengadakan kegiatan yang relevan dan selalu mendapat dukungan dari pihak jurusan; 2. Mempererat hubungan antaranggota dan masyarakat HMTI UNTAD untuk menciptakan solidaritas yang kuat; 3. Menjalin kerja sama strategis dengan individu atau organisasi atau komunitas baik di dalam maupun di luar kampus; 4. Meningkatkan kompetensi dan memberdayakan sumber daya manusia dalam HMTI UNTAD; 5. Menciptakan Lingkungan yang nyaman di setiap sekret HMTI UNTAD",
   socialMedia: {
-    instagram: "#",
-    facebook: "#",
-    linkedin: "#",
+    instagram: "ahmad_aafil",
+    linkedin: "ahmad-afil-ba8976258/",
   },
 };
 
 export const DEPUTY_OFFICERS: IOrganizationMember[] = [
   {
     title: "Ketua 1",
-    name: "Afdal Maedja",
+    name: "Muh. Afdal Maedja",
     image: "/img/pengurus/4.png",
-    socialMedia: { instagram: "#", facebook: "#", linkedin: "#" },
+    socialMedia: { instagram: "afdalmaedja", linkedin: "muhafdalmaedja" },
   },
   {
     title: "Ketua 2",
     name: "Hidayatul Fatwa",
     image: "/img/pengurus/5.png",
-    socialMedia: { instagram: "#", facebook: "#", linkedin: "#" },
+    socialMedia: { instagram: "hidayatulfatwa", linkedin: "hidayatul-fatwa" },
   },
   {
     title: "Sekretaris Umum",
     name: "Pradigta",
     image: "/img/pengurus/2.png",
-    socialMedia: { instagram: "#", facebook: "#", linkedin: "#" },
+    socialMedia: { instagram: "ditadjafar._", linkedin: "pradigtaa" },
   },
   {
     title: "Bendahara Umum",
     name: "Irma Sitti Rahma",
     image: "/img/pengurus/3.png",
-    socialMedia: { instagram: "#", facebook: "#", linkedin: "#" },
+    socialMedia: { instagram: "irmastrh_", linkedin: "irma-sitti-rahma-a60a92309" },
   },
 ];
 
@@ -241,13 +240,12 @@ export const DEPARTMENT_HEADS: IDepartmentHead[] = [
   {
     department: "Kesekretariatan",
     title: "Kepala Departemen Kesekretariatan",
-    name: "Andi Amanda A.T",
+    name: "Andi Amanda Andi Tallagu",
     description: "Merupakan departemen yang bertanggung jawab memanajemen Internal Himpunan.",
     image: "/img/pengurus/6.png",
     socialMedia: {
-      instagram: "#",
-      facebook: "#",
-      linkedin: "#",
+      instagram: "mandaanditllgu_",
+      linkedin: "andi-amanda-andi-tallagu",
     },
   },
   {
@@ -257,9 +255,8 @@ export const DEPARTMENT_HEADS: IDepartmentHead[] = [
     description: "Merupakan	departemen	yang	bertanggung	jawab	memanajemen Pengembangan Sumber Daya Manusia Dan Teknologi.",
     image: "/img/pengurus/7.png",
     socialMedia: {
-      instagram: "#",
-      facebook: "#",
-      linkedin: "#",
+      instagram: "_rizkanisa",
+      linkedin: "rizkaa",
     },
   },
   {
@@ -270,9 +267,8 @@ export const DEPARTMENT_HEADS: IDepartmentHead[] = [
       "Merupakan departemen yang berperan meningkatkan kualitas dan kompetensi kader agar lebih baik, sehingga mampu berperan aktif dalam HMTI UNTAD.",
     image: "/img/pengurus/8.png",
     socialMedia: {
-      instagram: "#",
-      facebook: "#",
-      linkedin: "#",
+      instagram: "rulll.008",
+      linkedin: "hairul-labri-03238b342",
     },
   },
   {
@@ -282,21 +278,19 @@ export const DEPARTMENT_HEADS: IDepartmentHead[] = [
     description: "Merupakan departemen yang bertanggung jawab memanajemen Hubungan Masyarakat dan Media Informasi.",
     image: "/img/pengurus/10.png",
     socialMedia: {
-      instagram: "#",
-      facebook: "#",
-      linkedin: "#",
+      instagram: "ardisepta01",
+      linkedin: "",
     },
   },
   {
     department: "Kreatifitas",
     title: "Kepala Departemen Kreatifitas",
-    name: "Muh. Risky",
+    name: "Moh.Risky Mardjuku",
     description: "Merupakan departemen yang bertanggung jawab memanajemen Sumber Daya gagasan yang inovatif.",
     image: "/img/pengurus/11.png",
     socialMedia: {
-      instagram: "#",
-      facebook: "#",
-      linkedin: "#",
+      instagram: "mdrikyyy_",
+      linkedin: "mohriskymardjuku",
     },
   },
   {
@@ -306,9 +300,8 @@ export const DEPARTMENT_HEADS: IDepartmentHead[] = [
     description: "Merupakan departemen yang bertanggung jawab memanajemen Kewirausahan.",
     image: "/img/pengurus/9.png",
     socialMedia: {
-      instagram: "#",
-      facebook: "#",
-      linkedin: "#",
+      instagram: "mitttaaas_",
+      linkedin: "",
     },
   },
 ];

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Home from "./pages/Landing/Home";
-import Form from "./pages/Pendaftaran/Form";
+// import Form from "./pages/Pendaftaran/Form";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Router>
         <Routes>
           <Route index path="/" element={<Home />} />
-          <Route path="/pendaftaran" element={<Form />} />
+          {/* <Route path="/pendaftaran" element={<Form />} /> */}
         </Routes>
       </Router>
     </>

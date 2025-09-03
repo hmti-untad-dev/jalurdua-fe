@@ -1,5 +1,6 @@
 import { CaretDown, ChatCircle, PaperPlaneTilt } from "@phosphor-icons/react";
 import { FAQ_DATA } from "../constants";
+import { Link } from "react-router";
 
 export default function LandingFAQ() {
   return (
@@ -47,12 +48,13 @@ export default function LandingFAQ() {
               placeholder="Ketik Pertanyaan Anda"
               required
             />
-            <button
+            <Link
+              to="https://wa.me/send/?phone=6282196882243&text=Halo+Kakk%2C+izin+bertanyaaa+...&type=phone_number&app_absent=0"
               type="submit"
               className="absolute end-2.5 bottom-2.5 rounded-lg bg-[#3E3F90] px-4 py-2 text-sm font-medium text-white hover:bg-[#2d2e70] focus:ring-4 focus:ring-blue-300 focus:outline-none"
             >
               <PaperPlaneTilt size={15} weight="fill" />
-            </button>
+            </Link>
           </div>
         </form>
       </div>

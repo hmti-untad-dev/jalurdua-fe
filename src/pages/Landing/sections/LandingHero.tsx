@@ -1,4 +1,4 @@
-import { FacebookLogo, InstagramLogo, TiktokLogo, YoutubeLogo } from "@phosphor-icons/react";
+import { InstagramLogo, LinkedinLogo, TiktokLogo, YoutubeLogo } from "@phosphor-icons/react";
 
 export default function LandingHero() {
   return (
@@ -56,11 +56,11 @@ export default function LandingHero() {
                   <TiktokLogo size={24} color="#3E3F90" weight="fill" />
                 </a>
                 <a
-                  href="https://www.facebook.com/hmti.untad/?locale=id_ID"
+                  href="https://www.linkedin.com/company/hmtiuntad"
                   target="_blank"
                   className="flex scale-90 transform items-center justify-center rounded-full bg-[#f2f2f2] p-2.5 transition-all duration-200 ease-in-out hover:scale-100 hover:brightness-145"
                 >
-                  <FacebookLogo size={24} color="#3E3F90" weight="fill" />
+                  <LinkedinLogo size={24} color="#3E3F90" weight="fill" />
                 </a>
                 <a
                   href="https://www.youtube.com/@hmtiuntad8514"
