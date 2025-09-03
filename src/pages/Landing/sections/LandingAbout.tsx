@@ -1,4 +1,4 @@
-import { Question } from "@phosphor-icons/react";
+import { Question, Usb } from "@phosphor-icons/react";
 import { MISSIONS_DATA } from "../constants";
 
 export default function LandingAbout() {
@@ -12,9 +12,9 @@ export default function LandingAbout() {
         </div>
         <h1 className="font-anton mb-6 text-center text-3xl font-bold text-[#373435] md:text-5xl">SEJARAH</h1>
         <div className="flex flex-wrap will-change-auto lg:flex-nowrap lg:gap-12">
-          <div className="container1 relative flex w-full cursor-pointer overflow-hidden md:items-center xl:max-h-[32rem] xl:w-1/2 xl:items-start xl:py-4">
+          <div className="flex w-full items-center xl:w-1/2">
             <img
-              className="max-h-80 w-screen justify-center rounded-lg object-cover transition-transform duration-1000"
+              className="w-screen justify-center rounded-lg object-cover"
               id="img-1"
               src="./img/jurusan.jpg"
               alt="jurusan"
@@ -22,18 +22,26 @@ export default function LandingAbout() {
           </div>
           <div className="mt-6 w-full lg:mt-0 xl:w-1/2 xl:pt-0">
             <p className="font-mons mb-4 text-justify text-base leading-relaxed font-normal">
-              Program Studi S1 Teknik Informatika Universitas Tadulako, lahir dari tonggak bersejarah pada 16 April 2012
-              dengan SK Pendirian No. 2428/UN28/LK/2012. Sejak itu, kami menjadi magnet bagi calon mahasiswa, diakui
-              melalui Keputusan Menteri No. 092/P/2014 pada 5 Maret 2014. Program Studi ini tidak hanya mencetak
-              sarjana, tetapi membentuk pemimpin masa depan di dunia informatika.
+              Program Studi S1 Teknik Informatika Universitas Tadulako lahir pada tahun 2012 sebagai bagian dari Jurusan
+              Teknik Elektro. Tiga tahun kemudian, tepatnya pada tahun 2015, Jurusan Teknologi Informasi secara resmi
+              berdiri di Universitas Tadulako sebagai tonggak baru dalam pengembangan ilmu dan teknologi.
+            </p>
+            <p className="font-mons mb-4 text-justify text-base leading-relaxed font-normal">
+              Seiring dengan berkembangnya program studi, pada 30 Mei 2014 lahirlah Himpunan Mahasiswa Teknik
+              Informatika (HMTI UNTAD). Himpunan ini pun menjadi rumah bagi kreativitas, aspirasi, serta perjuangan
+              mahasiswa Teknik Informatika.
+            </p>
+            <p className="font-mons mb-4 text-justify text-base leading-relaxed font-normal">
+              Sejak berdiri, HMTI UNTAD menjadi ruang belajar, ruang berkarya, dan ruang tumbuh bagi mahasiswa yang siap
+              bersaing di dunia akademik maupun profesional. Berbagai program, kegiatan, dan inovasi terus dilahirkan
+              untuk meningkatkan kualitas sumber daya mahasiswa, menciptakan karya inspiratif, serta memperkuat
+              solidaritas.
             </p>
             <p className="font-mons text-justify text-base leading-relaxed font-normal">
-              Minat yang konsisten dari calon mahasiswa melalui SNMPTN dan SBMPTN menjadi cermin keunggulan kami.
-              Didukung oleh tim dosen berjumlah 31 orang, Program Studi Teknik Informatika Fakultas Teknik memastikan
-              pengembangan ilmu dan keterampilan yang optimal. Prestasi kami semakin mengkilap dengan peringkat
-              akreditasi "baik sekali" berdasarkan Keputusan LAM INFOKOM No. 133/SK/LAM-INFOKOM/Ak/S/XXII./2022.
-              Bergabunglah dengan kami, di mana sejarah, minat, dan prestasi bersatu dalam meretas masa depan gemilang
-              di dunia Teknik Informatika. Selamat bergabung di perjalanan inspiratif kami!
+              Selama 11 tahun berkarya, HMTI UNTAD telah melahirkan talenta berprestasi, karya inovatif, serta alumni
+              yang sukses meniti karier profesional. HMTI bukan sekadar himpunan, melainkan keluarga besar yang terus
+              bergerak maju, membawa semangat kolaborasi, inovasi, dan inspirasi untuk generasi Teknik Informatika
+              Universitas Tadulako.
             </p>
           </div>
         </div>
@@ -196,20 +204,7 @@ export default function LandingAbout() {
 
               <div className="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-blue-100">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-blue-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    />
-                  </svg>
+                  <Usb size={24} className="text-blue-600" />
                 </div>
                 <div>
                   <div className="font-medium text-blue-600">USB</div>

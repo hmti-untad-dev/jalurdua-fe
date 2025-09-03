@@ -44,12 +44,12 @@ export default function LandingAchievement() {
                 <h2 className="w-fit text-[25px] font-bold">{ACHIEVEMENTS_DATA[currentIndex].title}</h2>
                 <p className="pt-4 text-base">{ACHIEVEMENTS_DATA[currentIndex].description}</p>
               </div>
-              <a
+              {/* <a
                 href="#"
                 className="flex w-fit items-center gap-3 rounded-lg bg-[#3E3F90] p-3 px-8 transition-all hover:bg-[#333477]"
               >
                 <p className="text-lg font-semibold text-white">Detail</p>
-              </a>
+              </a> */}
             </div>
 
             {/* Image Slider */}
